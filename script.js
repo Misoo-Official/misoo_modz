@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { 
             name: 'TikTok Mod Private', 
-            image: 'Images/Tiktok.png', 
+            image: 'images/Tiktok.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Aplikasi Lainnya
                         { 
             name: 'Instagram Clone Mod', 
-            image: 'Images/Instagram.png', 
+            image: 'images/Instagram.png', 
             category: 'sosial-media', 
             description: 'Complete privacy features, no ads, and can download photos/videos.', 
             rating: 4.5, 
