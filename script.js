@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { 
             name: 'TikTok Mod Private', 
-            image: 'Images/TikTok.png', 
+            image: 'Images/Tiktok.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
