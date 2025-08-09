@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             size: '312 MB', 
             version: 'V 41.2.5 ARM7', 
             os: 'Android 8+', 
-            update: '10-8-2025',
-            download_link: 'https://sfl.gl/5tHOJ'
+            update: '10-08-2025',
+            download_link: 'https://sfl.gl/FUk2d'
         },
         { 
             name: 'CapCut Mod', 
