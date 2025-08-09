@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">App Details - Misoo Modz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="app-detail-page">
+
+    <header class="header">
+        <div class="container">
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">Misoo Modz</div>
+            <div class="header-search-icon" id="header-search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-bar-container" id="search-bar-container">
+        <div class="container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Cari aplikasi...">
+            <i class="fas fa-times search-close-icon" id="search-close-icon"></i>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3 class="sidebar-logo">Misoo Modz</h3>
+            <i class="fas fa-times" id="sidebar-close"></i>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="programs.html">Programs <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="news.html">News <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="articles.html">Articles <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="https://t.me/misoocz" class="social-icon" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="http://googleusercontent.com/youtube.com/4" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@misoocz" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="app-detail-section">
+            <div class="container">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <img src="" alt="" id="app-logo">
+                        <div class="detail-info">
+                            <h2 id="app-name"></h2>
+                            <div class="rating-container" id="app-rating">
+                                </div>
+                            <p id="app-description"></p>
+                        </div>
+                    </div>
+                    <div class="detail-specs">
+                        <h3>Application Specifications</h3>
+                        <div class="spec-item">
+                            <span class="spec-label">File Size:</span>
+                            <span class="spec-value" id="app-size"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Version:</span>
+                            <span class="spec-value" id="app-version"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">OS:</span>
+                            <span class="spec-value" id="app-os"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Last Update:</span>
+                            <span class="spec-value" id="app-update"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="download-btn-lg" id="download-button">Download Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="about-section">
+            <div class="container">
+                <h3>Download free apps and games</h3>
+                <p>Misoo Modz offers the most popular modded games and apps. All apps are 100% tested to be safe, fast, and virus-free.</p>
+            </div>
+        </section>
+        <div class="container">
+            <div class="license">
+                <span><i class="fas fa-shield-alt"></i> Safe</span>
+                <span><i class="fas fa-check-circle"></i> Trusted</span>
+            </div>
+            <p>© 2015 - 2025 Misoo Modz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Kode ini harus berada di dalam app-detail.html
+        document.addEventListener('DOMContentLoaded', () => {
+            // Data Aplikasi Lengkap (PENTING: Salin array 'apps' dari file script.js ke sini)
+            const apps = [
+                      { 
+            name: 'Twitter Mod', 
+            image: 'images/Twitter.png', 
+            category: 'sosial-media', 
+            description: 'Enhance your Twitter experience with additional features.', 
+            is_popular: true, 
+            rating: 4.8, 
+            size: '133 MB', 
+            version: 'V 11.3.5',
+            os: 'Android 7+', 
+            update: '12-05-2025',
+            download_link: 'https://sfl.gl/7KaK4K3o'
+        },
+                { 
+            name: 'TikTok Mod Private', 
+            image: 'Images/TikTok.png', 
+            category: 'sosial-media', 
+            description: 'No watermark, HD video download, and no annoying ads.', 
+            is_popular: true, 
+            rating: 4.9, 
+            size: '312 MB', 
+            version: 'V 41.1.5', 
+            os: 'Android 8+', 
+            update: '31-07-2025',
+            download_link: 'https://sfl.gl/5tHOJ'
+        },
+        { 
+            name: 'CapCut Mod', 
+            image: 'images/CapCut.png', 
+            category: 'tools', 
+            description: 'Video editor with premium features without watermark and locked effects.', 
+            is_popular: true, 
+            rating: 4.7, 
+            size: '267 MB', 
+            version: 'V 15.1.0', 
+            os: 'Android 9+', 
+            update: '04-08-2025',
+            download_link: 'https://sfl.gl/C8lK'
+        },
+                { 
+            name: 'Spotify Premium', 
+            image: 'images/Spotify.png', 
+            category: 'sosial-media', 
+            description: 'Listen to music without ads, skip unlimited songs.', 
+            is_popular: true, 
+            rating: 4.6, 
+            size: '108 MB', 
+            version: 'V 9.0.72', 
+            os: 'Android 6+', 
+            update: '08-08-2025',
+            download_link: 'https://sfl.gl/OoM7lTQp'
+        },
+                        { 
+            name: 'Instagram Clone Mod', 
+            image: 'Images/Instagram.png', 
+            category: 'sosial-media', 
+            description: 'Complete privacy features, no ads, and can download photos/videos.', 
+            rating: 4.5, 
+            size: '132 MB', 
+            version: 'v 12.77', 
+            os: 'Android 7+', 
+            update: '07-08-2025',
+            download_link: 'https://sfl.gl/fVbJk65'
+        },
+        { 
+            name: 'WhatsApp Plus', 
+            image: 'images/Wa.png', 
+            category: 'sosial-media', 
+            description: 'Latest WhatsApp Mod with free premium features: send large files, change themes, hide blue ticks, anti-delete messages, and new stickers. Updated weekly!', 
+            rating: 4.3, 
+            size: '103 MB', 
+            version: 'V 22.35', 
+            os: 'Android 5+', 
+            update: '01-08-2025',
+            download_link: 'https://sfl.gl/4HE9I'
+        },
+        { 
+            name: 'YouTube Vanced', 
+            image: 'images/YouTubeVanced.png', 
+            category: 'tools', 
+            description: 'Watch YouTube Vanched + micro G without ads, background play, and more.', 
+            rating: 4.8, 
+            size: '182 MB', 
+            version: 'V 19.16.39', 
+            os: 'Android 6+', 
+            update: '16-07-2025',
+            download_link: 'https://sfl.gl/rkgw7'
+        },
+        { 
+            name: 'Minecraft Mod', 
+            image: 'images/Minecraft.png', 
+            category: 'game', 
+            description: 'Unlimited materials and all premium items unlocked.', 
+            rating: 4.6, 
+            size: '336 MB', 
+            version: 'v1.21.81', 
+            os: 'Android 8+', 
+            update: '08-07-2025',
+            download_link: 'https://sfl.gl/JLTu'
+        },
+        { 
+            name: 'KineMaster Pro', 
+            image: 'images/KineMaster.png', 
+            category: 'tools', 
+            description: 'Video editor with premium features without watermark.', 
+            rating: 4.7, 
+            size: '129 MB', 
+            version: 'V 7.7.6.35288', 
+            os: 'Android 9+', 
+            update: '02-08-2025',
+            download_link: 'https://sfl.gl/gxrbQ'
+        },
+                // ... (Masukkan semua objek data aplikasi lainnya dari script.js) ...
+            ];
+            
+            // Kode untuk membuat bintang
+            function createStarRating(rating) {
+                const starContainer = document.createElement('div');
+                starContainer.className = 'rating-stars';
+                const fullStars = Math.floor(rating);
+                const halfStar = rating - fullStars >= 0.5;
+                const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+                let starHTML = '';
+                for (let i = 0; i < fullStars; i++) starHTML += '<i class="fas fa-star full"></i>';
+                if (halfStar) starHTML += '<i class="fas fa-star-half-alt half"></i>';
+                for (let i = 0; i < emptyStars; i++) starHTML += '<i class="far fa-star empty"></i>';
+                starContainer.innerHTML = starHTML;
+                return starContainer.outerHTML;
+            }
+
+            if (document.body.classList.contains('app-detail-page')) {
+                const params = new URLSearchParams(window.location.search);
+                const appName = params.get('app');
+                const app = apps.find(a => a.name === appName);
+
+                if (app) {
+                    document.getElementById('page-title').innerText = `${app.name} - Misoo Modz`;
+                    document.getElementById('app-logo').src = app.image;
+                    document.getElementById('app-logo').alt = app.name;
+                    document.getElementById('app-name').innerText = app.name;
+                    document.getElementById('app-description').innerText = app.description;
+                    document.getElementById('app-size').innerText = app.size;
+                    document.getElementById('app-version').innerText = app.version;
+                    document.getElementById('app-os').innerText = app.os;
+                    document.getElementById('app-update').innerText = app.update;
+                    
+                    const starContainer = document.getElementById('app-rating');
+                    starContainer.innerHTML = createStarRating(app.rating);
+                    
+                    const downloadBtn = document.getElementById('download-button');
+                    downloadBtn.href = app.download_link; 
+                } else {
+                    document.querySelector('main').innerHTML = '<div class="container"><h2 style="text-align:center; padding: 50px;">The app is coming soon!</h2></div>';
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

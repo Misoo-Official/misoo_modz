@@ -1,0 +1,717 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #f0f2f5;
+    --text-color: #333;
+    --card-bg-color: #ffffff;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Perbaikan scroll saat overlay aktif */
+body.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--card-bg-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-toggle, .header-search-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-bar-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    z-index: 101;
+    padding: 15px 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.search-bar-container.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.search-bar-container .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.search-close-icon {
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+#sidebar-close {
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar-nav li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-nav a:hover {
+    color: var(--primary-color);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+    display: flex;
+    gap: 15px;
+}
+
+/* Ikon Sosial Media yang diperbaiki */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon .fa-youtube {
+    background-color: #FF0000;
+}
+.social-icon .fa-telegram-plane {
+    background-color: #26A5E4;
+}
+.social-icon .fa-tiktok {
+    background-color: #000000;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 150;
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Categories Nav */
+.categories-nav {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.category-btn.active, .category-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ... (kode CSS lainnya tetap sama) ... */
+
+/* App Icons Scroll */
+.app-icons-scroll {
+    padding: 30px 0;
+}
+
+.app-icons-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.app-icons-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Gaya baru untuk ikon aplikasi */
+.app-icons-container a {
+    text-decoration: none;
+    color: var(--card-bg-color); /* Warna teks putih */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    width: 90px; /* Lebar ikon wrapper */
+    padding: 10px;
+    background-color: var(--primary-color); /* Warna background biru */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.app-icons-container a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.app-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.app-icon-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ... (kode CSS lainnya tetap sama) ... */
+
+
+.app-icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.app-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* App List Grid */
+.app-list {
+    padding: 50px 0;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.app-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+.app-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.app-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.app-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+/* Rating Stars */
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.rating-stars i {
+    color: gold;
+    font-size: 1rem;
+}
+
+.rating-stars .empty {
+    color: #ccc;
+}
+
+.rating-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.app-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.download-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* About Section di Footer */
+.about-section {
+    background-color: var(--secondary-color);
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.about-section h3 {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.license {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.license i {
+    margin-right: 5px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsif */
+@media (min-width: 769px) {
+    .header-search-icon {
+        display: none;
+    }
+
+    .search-bar-container {
+        display: block !important;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+        animation: none;
+    }
+
+    .search-bar-container .container {
+        padding: 0;
+        display: block;
+    }
+
+    .search-bar {
+        width: 300px;
+    }
+    
+    .search-close-icon {
+        display: none;
+    }
+
+    .header .container {
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        flex-grow: 0;
+        text-align: left;
+    }
+
+    .search-bar-container {
+        order: 1;
+        flex-grow: 1;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    .header-search-icon {
+        display: block;
+    }
+
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .search-bar-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        z-index: 101;
+        padding: 15px 0;
+        animation: fadeIn 0.3s forwards;
+        display: none;
+    }
+    
+    .search-bar-container.active {
+        display: block;
+    }
+    
+    .search-bar-container .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        background-color: var(--secondary-color);
+        padding: 30px 20px;
+    }
+
+    .about-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-icons-container {
+        justify-content: flex-start;
+    }
+}
+
+/* ... (semua kode CSS sebelumnya) ... */
+
+/* Halaman Detail Aplikasi */
+.app-detail-section {
+    padding: 50px 0;
+    background-color: var(--background-color);
+}
+
+.detail-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-header img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.detail-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.detail-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.detail-specs {
+    margin-bottom: 30px;
+}
+
+.detail-specs h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.spec-value {
+    color: #777;
+}
+
+.download-btn-lg {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn-lg:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsif untuk halaman detail */
+@media (max-width: 768px) {
+    .detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
