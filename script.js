@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
             rating: 4.9, 
-            size: '312 MB', 
-            version: 'V 41.2.5 ARM7', 
+            size: '204/312 MB', 
+            version: 'V 41.3.2 ARM7', 
             os: 'Android 8+', 
-            update: '10-08-2025',
-            download_link: 'https://sfl.gl/FUk2d'
+            update: '13-08-2025',
+            download_link: 'https://sfl.gl/OFOE'
         },
         { 
             name: 'CapCut Mod', 
