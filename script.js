@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { 
             name: 'TikTok Private and Platinum', 
-            image: 'images/Tiktok.png', 
+            image: 'images/TikTok.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
