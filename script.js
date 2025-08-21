@@ -16,7 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
             download_link: 'https://sfl.gl/7KaK4K3o'
         },
         { 
-            name: 'TikTok Private and Platinum', 
+            name: 'TikTok Mod Private', 
+            image: 'images/TikTok.png', 
+            category: 'sosial-media', 
+            description: 'No watermark, HD video download, and no annoying ads.', 
+            is_popular: true, 
+            rating: 4.9, 
+            size: '204/312 MB', 
+            version: 'V 41.3.2 ARM7', 
+            os: 'Android 8+', 
+            update: '13-08-2025',
+            download_link: 'https://sfl.gl/OFOE'
+        },
+        { 
+            name: 'TikTok Mod Platinum', 
             image: 'images/TikTok.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
