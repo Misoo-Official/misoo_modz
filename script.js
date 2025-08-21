@@ -17,30 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { 
             name: 'TikTok Mod Private', 
-            image: 'images/TikTok.png', 
+            image: 'images/TikTokPrivate.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
             rating: 4.9, 
-            size: '204/312 MB', 
-            version: 'V 41.3.2 ARM7', 
+            size: '312 MB', 
+            version: 'V 41.3.5 ARM7', 
             os: 'Android 8+', 
-            update: '13-08-2025',
-            download_link: 'https://sfl.gl/OFOE'
+            update: '20-08-2025',
+            download_link: 'https://sfl.gl/qM825Q'
         },
         { 
             name: 'TikTok Mod Platinum', 
-            image: 'images/TikTok.png', 
+            image: 'images/TikTokPlatinum.png', 
             category: 'sosial-media', 
             description: 'No watermark, HD video download, and no annoying ads.', 
             is_popular: true, 
             rating: 4.9, 
-            size: '204/312 MB', 
-            version: 'V 41.3.2 ARM7', 
+            size: '204 MB', 
+            version: 'V 41.3.5 ARM7', 
             os: 'Android 8+', 
-            update: '13-08-2025',
-            download_link: 'https://sfl.gl/OFOE'
+            update: '20-08-2025',
+            download_link: 'https://sfl.gl/a7PF8NNY'
         },
+
         { 
             name: 'CapCut Mod', 
             image: 'images/CapCut.png', 
