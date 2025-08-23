@@ -70,6 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         // Aplikasi Lainnya
+{ 
+    name: 'MT Manager VIP Clone', 
+    image: 'images/MTManager.png', 
+    category: 'tools', 
+    description: 'Cloned VIP version with full premium features, APK editing, multi-tab code editor, and no ads.', 
+    rating: 4.6, 
+    size: '22.41 MB', 
+    version: 'V 2.14.5 (Clone)', 
+    os: 'Android 10', 
+    update: '23-08-2025',
+    download_link: 'https://sfl.gl/5THZ'
+},
                         { 
             name: 'Instagram Clone Mod', 
             image: 'images/Instagram.png', 
